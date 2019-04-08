@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wtmcb.dishonest.mapper.DishonestorMapper">
+    <resultMap id="BaseResultMap" type="com.wtmcb.dishonest.entity.Dishonestor">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="StdStg" jdbcType="INTEGER" property="StdStg"/>
+        <result column="StdStl" jdbcType="INTEGER" property="StdStl"/>
+        <result column="_update_time" jdbcType="VARCHAR" property="_update_time"/>
+        <result column="cambrian_appid" jdbcType="VARCHAR" property="cambrian_appid"/>
+        <result column="changefreq" jdbcType="VARCHAR" property="changefreq"/>
+        <result column="age" jdbcType="VARCHAR" property="age"/>
+        <result column="areaName" jdbcType="VARCHAR" property="areaName"/>
+        <result column="businessEntity" jdbcType="VARCHAR" property="businessEntity"/>
+        <result column="cardNum" jdbcType="VARCHAR" property="cardNum"/>
+        <result column="caseCode" jdbcType="VARCHAR" property="caseCode"/>
+        <result column="courtName" jdbcType="VARCHAR" property="courtName"/>
+        <result column="disruptTypeName" jdbcType="VARCHAR" property="disruptTypeName"/>
+        <result column="duty" jdbcType="VARCHAR" property="duty"/>
+        <result column="focusNumber" jdbcType="VARCHAR" property="focusNumber"/>
+        <result column="gistId" jdbcType="VARCHAR" property="gistId"/>
+        <result column="gistUnit" jdbcType="VARCHAR" property="gistUnit"/>
+        <result column="iname" jdbcType="VARCHAR" property="iname"/>
+        <result column="partyTypeName" jdbcType="VARCHAR" property="partyTypeName"/>
+        <result column="performance" jdbcType="VARCHAR" property="performance"/>
+        <result column="performedPart" jdbcType="VARCHAR" property="performedPart"/>
+        <result column="publishDate" jdbcType="VARCHAR" property="publishDate"/>
+        <result column="publishDateStamp" jdbcType="VARCHAR" property="publishDateStamp"/>
+        <result column="regDate" jdbcType="VARCHAR" property="regDate"/>
+        <result column="sexy" jdbcType="VARCHAR" property="sexy"/>
+        <result column="sitelink" jdbcType="VARCHAR" property="sitelink"/>
+        <result column="type" jdbcType="VARCHAR" property="type"/>
+        <result column="unperformPart" jdbcType="VARCHAR" property="unperformPart"/>
+        <result column="lastmod" jdbcType="VARCHAR" property="lastmod"/>
+        <result column="loc" jdbcType="VARCHAR" property="loc"/>
+        <result column="priority" jdbcType="VARCHAR" property="priority"/>
+        <result column="SiteId" jdbcType="INTEGER" property="SiteId"/>
+        <result column="_version" jdbcType="INTEGER" property="_version"/>
+        <result column="_select_time" jdbcType="INTEGER" property="_select_time"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, StdStg, StdStl, _update_time, cambrian_appid, changefreq, age, areaName, businessEntity,
+        cardNum, caseCode, courtName, disruptTypeName, duty, focusNumber, gistId, gistUnit,
+        iname, partyTypeName, performance, performedPart, publishDate, publishDateStamp, regDate, sexy, sitelink,
+        type, unperformPart, lastmod, loc, priority, SiteId, _version, _select_time
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from dishonest
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <insert id="insertSelective" keyColumn="id" keyProperty="id"
+            parameterType="com.wtmcb.dishonest.entity.Dishonestor" useGeneratedKeys="true">
+        insert into dishonest
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="StdStg != null">
+                StdStg,
+            </if>
+            <if test="StdStl != null">
+                StdStl,
+            </if>
+            <if test="_update_time != null">
+                _update_time,
+            </if>
+            <if test="cambrian_appid != null">
+                cambrian_appid,
+            </if>
+            <if test="changefreq != null">
+                changefreq,
+            </if>
+            <if test="age != null">
+                age,
+            </if>
+            <if test="areaName != null">
+                areaName,
+            </if>
+            <if test="businessEntity != null">
+                businessEntity,
+            </if>
+            <if test="cardNum != null">
+                cardNum,
+            </if>
+            <if test="caseCode != null">
+                caseCode,
+            </if>
+            <if test="courtName != null">
+                courtName,
+            </if>
+            <if test="disruptTypeName != null">
+                disruptTypeName,
+            </if>
+            <if test="duty != null">
+                duty,
+            </if>
+            <if test="focusNumber != null">
+                focusNumber,
+            </if>
+            <if test="gistId != null">
+                gistId,
+            </if>
+            <if test="gistUnit != null">
+                gistUnit,
+            </if>
+            <if test="iname != null">
+                iname,
+            </if>
+            <if test="partyTypeName != null">
+                partyTypeName,
+            </if>
+            <if test="performance != null">
+                performance,
+            </if>
+            <if test="performedPart != null">
+                performedPart,
+            </if>
+            <if test="publishDate != null">
+                publishDate,
+            </if>
+            <if test="publishDateStamp != null">
+                publishDateStamp,
+            </if>
+            <if test="regDate != null">
+                regDate,
+            </if>
+            <if test="sexy != null">
+                sexy,
+            </if>
+            <if test="sitelink != null">
+                sitelink,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+            <if test="unperformPart != null">
+                unperformPart,
+            </if>
+            <if test="lastmod != null">
+                lastmod,
+            </if>
+            <if test="loc != null">
+                loc,
+            </if>
+            <if test="priority != null">
+                priority,
+            </if>
+            <if test="SiteId != null">
+                SiteId,
+            </if>
+            <if test="_version != null">
+                _version,
+            </if>
+            <if test="_select_time != null">
+                _select_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="StdStg != null">
+                #{StdStg,jdbcType=INTEGER},
+            </if>
+            <if test="StdStl != null">
+                #{StdStl,jdbcType=INTEGER},
+            </if>
+            <if test="_update_time != null">
+                #{_update_time,jdbcType=VARCHAR},
+            </if>
+            <if test="cambrian_appid != null">
+                #{cambrian_appid,jdbcType=VARCHAR},
+            </if>
+            <if test="changefreq != null">
+                #{changefreq,jdbcType=VARCHAR},
+            </if>
+            <if test="age != null">
+                #{age,jdbcType=VARCHAR},
+            </if>
+            <if test="areaName != null">
+                #{areaName,jdbcType=VARCHAR},
+            </if>
+            <if test="businessEntity != null">
+                #{businessEntity,jdbcType=VARCHAR},
+            </if>
+            <if test="cardNum != null">
+                #{cardNum,jdbcType=VARCHAR},
+            </if>
+            <if test="caseCode != null">
+                #{caseCode,jdbcType=VARCHAR},
+            </if>
+            <if test="courtName != null">
+                #{courtName,jdbcType=VARCHAR},
+            </if>
+            <if test="disruptTypeName != null">
+                #{disruptTypeName,jdbcType=VARCHAR},
+            </if>
+            <if test="duty != null">
+                #{duty,jdbcType=VARCHAR},
+            </if>
+            <if test="focusNumber != null">
+                #{focusNumber,jdbcType=VARCHAR},
+            </if>
+            <if test="gistId != null">
+                #{gistId,jdbcType=VARCHAR},
+            </if>
+            <if test="gistUnit != null">
+                #{gistUnit,jdbcType=VARCHAR},
+            </if>
+            <if test="iname != null">
+                #{iname,jdbcType=VARCHAR},
+            </if>
+            <if test="partyTypeName != null">
+                #{partyTypeName,jdbcType=VARCHAR},
+            </if>
+            <if test="performance != null">
+                #{performance,jdbcType=VARCHAR},
+            </if>
+            <if test="performedPart != null">
+                #{performedPart,jdbcType=VARCHAR},
+            </if>
+            <if test="publishDate != null">
+                #{publishDate,jdbcType=VARCHAR},
+            </if>
+            <if test="publishDateStamp != null">
+                #{publishDateStamp,jdbcType=VARCHAR},
+            </if>
+            <if test="regDate != null">
+                #{regDate,jdbcType=VARCHAR},
+            </if>
+            <if test="sexy != null">
+                #{sexy,jdbcType=VARCHAR},
+            </if>
+            <if test="sitelink != null">
+                #{sitelink,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null">
+                #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="unperformPart != null">
+                #{unperformPart,jdbcType=VARCHAR},
+            </if>
+            <if test="lastmod != null">
+                #{lastmod,jdbcType=VARCHAR},
+            </if>
+            <if test="loc != null">
+                #{loc,jdbcType=VARCHAR},
+            </if>
+            <if test="priority != null">
+                #{priority,jdbcType=VARCHAR},
+            </if>
+            <if test="SiteId != null">
+                #{SiteId,jdbcType=INTEGER},
+            </if>
+            <if test="_version != null">
+                #{_version,jdbcType=INTEGER},
+            </if>
+            <if test="_select_time != null">
+                #{_select_time,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+</mapper>

@@ -45,7 +45,7 @@ public class HttpUtils {
         HTTP_CLIENT.executeMethod(getMethod);
         int statusCode = getMethod.getStatusCode();
         if (HttpStatus.SC_OK != statusCode){
-            throw new Exception("百度状态码返回异常");
+            throw new Exception("状态码返回异常");
         }
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(getMethod.getResponseBodyAsStream()));
         String line = null;

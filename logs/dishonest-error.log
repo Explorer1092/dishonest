@@ -1,0 +1,15 @@
+2019-04-08/17:09:19.113|^_^|[main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter 42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field spiderService in com.wtmcb.dishonest.SpringBootApplication required a bean of type 'com.wtmcb.dishonest.spider.service.SpiderService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.wtmcb.dishonest.spider.service.SpiderService' in your configuration.
+

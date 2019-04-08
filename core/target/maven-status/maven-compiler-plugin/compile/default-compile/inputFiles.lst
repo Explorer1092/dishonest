@@ -1,0 +1,10 @@
+/Development/Project/Private/dishonest/core/src/main/java/com/wtmcb/dishonest/spider/job/SpiderExecutor.java
+/Development/Project/Private/dishonest/core/src/main/java/com/wtmcb/dishonest/entity/Dishonestor.java
+/Development/Project/Private/dishonest/core/src/main/java/com/wtmcb/dishonest/spider/service/SpiderService.java
+/Development/Project/Private/dishonest/core/src/main/java/com/wtmcb/dishonest/spider/job/DishonestUtils.java
+/Development/Project/Private/dishonest/core/src/main/java/com/wtmcb/dishonest/entity/exception/RemoteException.java
+/Development/Project/Private/dishonest/core/src/main/java/com/wtmcb/dishonest/utils/HttpUtils.java
+/Development/Project/Private/dishonest/core/src/main/java/com/wtmcb/dishonest/mapper/DishonestorMapper.java
+/Development/Project/Private/dishonest/core/src/main/java/com/wtmcb/dishonest/mapper/FetchLogMapper.java
+/Development/Project/Private/dishonest/core/src/main/java/com/wtmcb/dishonest/SpringBootApplication.java
+/Development/Project/Private/dishonest/core/src/main/java/com/wtmcb/dishonest/entity/FetchLog.java
